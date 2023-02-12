@@ -5,6 +5,11 @@ backend:
 media_folder: "assets/images/" # Folder where user uploaded files should go
 public_folder: "/images"
 
+media_library: # From https://www.netlifycms.org/docs/uploadcare/
+  name: uploadcare
+  config:
+    publicKey: ff6c12d07f9d80a6f3d9
+
 locale: 'es'
 
 collections: # A list of collections the CMS should be able to edit
@@ -17,14 +22,17 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - label: "Imagen"
         name: "images"
-        widget: list
-        fields: 
-          - {name: image, label: Image, widget: image}
-          # - {name: alt, label: Alt, widget: string}
+        widget: "image"
+        choose_url: true
+        # default: "/uploads/chocolate-dogecoin.jpg"
+        media_library:
+          config:
+            multiple: true
       - label: "Tags"
         name: "tags"
         widget: "list"
         allow_add: true
+        allow_multiple: true
         default: ["news"]
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
