@@ -3,7 +3,7 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 
 media_folder: "site/assets/images" # Folder where user uploaded files should go
-public_folder: "imgages"
+public_folder: "images"
 
 locale: 'es'
 
