@@ -1,0 +1,24 @@
+{{ if not .IsHome }}
+    <footer class="footer">
+        {{ partial "footer_base.html" . }}
+    </footer>
+{{ end }}
+
+<!-- Redirect to netlifycms. Source: https://www.netlifycms.org/docs/add-to-your-site/ -->
+<script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+
+</body>
+
+{{ template "_internal/google_analytics.html" . }}
+{{ template "_internal/google_analytics_async.html" . }}
+</html>
