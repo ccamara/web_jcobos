@@ -5,11 +5,6 @@ backend:
 media_folder: "assets/images/" # Folder where user uploaded files should go
 public_folder: "/images"
 
-media_library: # From https://www.netlifycms.org/docs/uploadcare/
-  name: uploadcare
-  config:
-    publicKey: ff6c12d07f9d80a6f3d9
-
 locale: 'es'
 
 collections: # A list of collections the CMS should be able to edit
