@@ -17,12 +17,10 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - label: "Imagen"
         name: "images"
-        widget: "image"
-        choose_url: true
-        # default: "/uploads/chocolate-dogecoin.jpg"
-        media_library:
-          config:
-            multiple: true
+        widget: list
+        fields: 
+          - {name: image, label: Image, widget: image}
+          - {name: alt, label: Alt, widget: string}
       - label: "Tags"
         name: "tags"
         widget: "list"
