@@ -8,3 +8,5 @@ tags:
   - nature
 ---
 Esto es un textoasdf
+
+![](/images/photo_2022-11-29_15-29-27.jpg)
