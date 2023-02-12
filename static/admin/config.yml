@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
 
-media_folder: "site/assets/images" # Folder where user uploaded files should go
+media_folder: "assets/images" # Folder where user uploaded files should go
 public_folder: "images"
 
 locale: 'es'
@@ -15,8 +15,14 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text"}
-      - {label: "Image", name: "images", widget: "image", required: false}
+      - label: "Imagen"
+        name: "images"
+        widget: "image"
+        choose_url: true
+        # default: "/uploads/chocolate-dogecoin.jpg"
+        media_library:
+          config:
+            multiple: true
       - label: "Tags"
         name: "tags"
         widget: "list"
