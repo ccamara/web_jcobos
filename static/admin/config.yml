@@ -18,7 +18,6 @@ collections: # A list of collections the CMS should be able to edit
       - label: "Imagen"
         name: "images"
         widget: "image"
-        multiple: true
         choose_url: true
         # default: "/uploads/chocolate-dogecoin.jpg"
         media_library:
